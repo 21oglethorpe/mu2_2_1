@@ -2,10 +2,10 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 -- entity
-entity decoder is
+entity encoder is
     port(A1,A2,A3,A0, A4, A5, A6, A7, A8, A9, A10, A11,A12,A13,A14,A15:   in  std_logic;
         Y1:               out std_logic_vector(4 downto 0));
-end decoder;
+end encoder;
 architecture LOGIC of decoder is
 begin
 --MSB represents the enabler of the system
