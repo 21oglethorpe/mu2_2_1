@@ -1,0 +1,15 @@
+-- library declaration
+library IEEE;
+use IEEE.std_logic_1164.all;
+-- entity
+entity decoder is
+    port(A1,A2,A3,A0:   in  std_logic;
+        Y1:               out std_logic_vector(1 downto 0));
+end decoder;
+architecture LOGIC of decoder is
+begin
+Y1 <= "00" when A0 = '1' else
+     "01" when A1 = '1' else
+    "10" when A2 = '1' else
+     "11" when A3 = '1';
+    end  LOGIC;
