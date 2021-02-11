@@ -2,12 +2,12 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 -- entity
-entity encoder is
+entity encoder_4b is
     port(A:   out  std_logic_vector(1 downto 0);
         clock, reset: in std_logic;
         Y1:               in std_logic_vector(3 downto 0));
-end encoder;
-architecture LOGIC of encoder is
+end encoder_4b;
+architecture LOGIC of encoder_4b is
 begin
 process(clock)
 begin
