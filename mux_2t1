@@ -11,7 +11,6 @@ end my_2t1_mux;
 architecture mux2t1_2 of my_2t1_mux is
 begin
 with SEL select
-MX_OUT <= D1 when '1',
-D0 when '0',
-'0' when others;
+MX_OUT <= D1 WHEN  '1',
+D0 when others;
 end mux2t1_2;
