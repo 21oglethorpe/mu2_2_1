@@ -2,13 +2,13 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 -- entity
-entity my_2t1_mux is
+entity mux_2t1 is
 port (D1,D0 : in std_logic;
 SEL : in std_logic;
 MX_OUT : out std_logic);
-end my_2t1_mux;
+end mux_2t1;
 -- architecture
-architecture mux2t1_2 of my_2t1_mux is
+architecture mux2t1_2 of mux_2t1 is
 begin
 with SEL select
 MX_OUT <= D1 WHEN  '1',
