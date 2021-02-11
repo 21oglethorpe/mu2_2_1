@@ -8,7 +8,7 @@ entity flip_flop is
 end flip_flop;
 
 --flip flop with w/Synchronous Active High Reset
-architecture ff_HR of decoder is
+architecture ff_HR of flip_flop is
 begin
 --MSB represents the enabler of the system
 tik: process (clock)
@@ -40,7 +40,7 @@ end process tik;
 end  ff_HR_CE;
 
 --flip flop with w/Synchronous Active Low Reset
-architecture ff_LR of decoder is
+architecture ff_LR of flip_flop is
 begin
 --MSB represents the enabler of the system
 tik: process (clock)
