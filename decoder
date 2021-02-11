@@ -3,13 +3,28 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 -- entity
 entity decoder is
-    port(A1,A2,A3,A0:   in  std_logic;
-        Y1:               out std_logic_vector(1 downto 0));
+    port(A1,A2,A3,A0, A4, A5, A6, A7, A8, A9, A10, A11,A12,A13,A14,A15:   in  std_logic;
+        Y1:               out std_logic_vector(4 downto 0));
 end decoder;
 architecture LOGIC of decoder is
 begin
-Y1 <= "00" when A0 = '1' else
-     "01" when A1 = '1' else
-    "10" when A2 = '1' else
-     "11" when A3 = '1';
-    end  LOGIC;
+--MSB represents the enabler of the system
+Y1 <= "10000" when A0 = '1' else
+     "10001" when A1 = '1' else
+    "10010" when A2 = '1' else
+     "10011" when A3 = '1'else
+     "10100" when A4 = '1' else
+          "10101" when A5 = '1' else
+         "10110" when A6 = '1' else
+          "10111" when A7 = '1'else
+          "11000" when A8 = '1' else
+               "11001" when A9 = '1' else
+              "11010" when A10 = '1' else
+               "11011" when A11 = '1'else
+               "11100" when A12 = '1' else
+                    "11101" when A13 = '1' else
+                   "11110" when A14 = '1' else
+                    "11111" when A15 = '1' else
+                    "00000";
+                    
+   end  LOGIC;
