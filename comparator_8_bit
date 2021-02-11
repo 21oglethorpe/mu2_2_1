@@ -1,0 +1,15 @@
+-- library declaration
+library IEEE;
+use IEEE.std_logic_1164.all;
+-- entity
+entity comparator is
+    port(A1, B1, A2,B2,A3,B3, A4, B4:   in  std_logic;
+        Y1,Y2,Y3, Y4:               out std_logic);
+end entity comparator;
+architecture LOGIC of comparator is
+begin
+Y1 <= NOT (A1 xor B1);
+	Y2 <= NOT (A2 xor B2);
+	Y3 <= NOT (A3 xor B3);
+	Y4 <= NOT (A4 xor B4);
+    end architecture LOGIC;
